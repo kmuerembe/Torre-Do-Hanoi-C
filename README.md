@@ -1,37 +1,63 @@
- Torre-Do-Hanoi-C
-Trabalho de C resolvendo a Torre de Hanói usando recursão
+```markdown
+# Torre de Hanói com Cores
 
-Trabalho 4 – Torre de Hanói em C
+Este programa resolve o clássico problema da **Torre de Hanói** utilizando recursão, com a adição de cores no terminal para facilitar a identificação visual dos discos durante a execução.
 
-Descrição
-Este repositório contém a resolução do **Trabalho 4** da disciplina de [Nome da Disciplina], cujo objetivo é resolver o clássico problema da **Torre de Hanói** utilizando **recursão**.
+## Funcionalidades
 
-O programa permite:
-- Escolher o número de discos
-- Mostrar cada movimento realizado
-- Contar o total de movimentos necessários para resolver o problema
+- Algoritmo recursivo eficiente (complexidade O(2ⁿ)).
+- Exibição colorida dos discos: cada disco recebe uma cor diferente (alternando entre 6 cores ANSI).
+- Contador automático do número total de movimentos.
+- Entrada simples do número de discos via terminal.
+- Cálculo e exibição da fórmula `2ⁿ - 1` para conferência.
 
-Além do código, o repositório inclui relatório e exercícios relacionados à recursão e análise de complexidade.
+## Como compilar e executar
 
+### Compilação (com GCC):
 
+```bash
+gcc -o hanoi hanoi.c
+```
 
- Estrutura do Repositório
-torre-de-hanoi-c/
-├── main.c # Código em C da Torre de Hanói
-├── relatorio/
-│ └── relatorio.pdf # Explicação do algoritmo e resultados
-└── exercicios/
-└── exercicios.pdf # Exercícios resolvidos sobre recursão e complexidade
+Execução:
 
- Instruções de Uso
-1. Abrir o arquivo `main.c` em um compilador C (Code::Blocks, Dev C++, GCC, etc.)  
-2. Executar o programa e digitar o número de discos desejado  
-3. O programa irá imprimir **passo a passo** os movimentos e o **total de movimentos**
+```bash
+./hanoi
+```
 
- Análise de Complexidade
+O programa solicitará que você digite o número de discos desejado.
 
-O número mínimo de movimentos para `n` discos é dado por:
-2^n - 1
-Portanto, a complexidade do algoritmo é **O(2^n)**, crescendo exponencialmente com o número de discos.
+Exemplo de uso
 
+```
+Digite o número de discos: 3
 
+Mover disco 1 de A para C
+Mover disco 2 de A para B
+Mover disco 1 de C para B
+Mover disco 3 de A para C
+Mover disco 1 de B para A
+Mover disco 2 de B para C
+Mover disco 1 de A para C
+
+Total de movimentos: 7
+```
+
+(As cores aparecerão no terminal, mas aqui estão representadas apenas pelo texto.)
+
+Estrutura do projeto / Histórico de commits
+
+O desenvolvimento foi dividido em três commits principais, cada um adicionando uma funcionalidade:
+
+1. Algoritmo base – Implementação recursiva da Torre de Hanói.
+2. Contador de movimentos – Variável global para rastrear o total de passos.
+3. Cores ANSI – Inclusão de cores para distinguir os discos.
+
+Requisitos
+
+· Terminal com suporte a cores ANSI (praticamente todos os terminais modernos em Linux, macOS e Windows 10+).
+· Compilador C (ex.: GCC, Clang).
+
+Licença
+
+Este projeto é de código aberto e pode ser usado livremente para fins educacionais.
